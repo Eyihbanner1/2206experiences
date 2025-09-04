@@ -1,0 +1,80 @@
+[
+  {
+    "slug": "travel-tips-first-time-africa",
+    "title": "Essential Travel Tips for First-Time Visitors to Africa",
+    "excerpt": "Planning your first trip to Africa? Get insider tips on visas, health prep, packing essentials, cultural considerations, and safety advice from experienced travelers.",
+    "author": "2206 Experiences Team", 
+    "publishDate": "2025-09-03",
+    "category": "Travel Tips",
+    "readTime": "8 min read",
+    "tags": ["Africa", "First-Time Travel", "Travel Tips", "Safety", "Cultural Tips"],
+    "image": "/images/blog/africa-first-time.jpg",
+    "featured": true,
+    "seoTitle": "First-Time Africa Travel Guide: Essential Tips & Advice",
+    "seoDescription": "Complete guide for first-time visitors to Africa. Learn about visas, health preparations, packing lists, cultural considerations, and safety tips from travel experts."
+  },
+  {
+    "slug": "africa-visa-guide",
+    "title": "Visa Guide: Everything You Need to Know About African Visas", 
+    "excerpt": "Navigate African visa requirements with confidence. Complete guide covering visa types, country-specific requirements, application tips, and money-saving strategies.",
+    "author": "2206 Experiences Team",
+    "publishDate": "2025-09-03", 
+    "category": "Visa Information",
+    "readTime": "12 min read",
+    "tags": ["Visas", "Africa Travel", "Documentation", "Travel Planning", "Requirements"],
+    "image": "/images/blog/africa-visa-guide.jpg",
+    "featured": true,
+    "seoTitle": "Complete Africa Visa Guide: Requirements & Applications",
+    "seoDescription": "Comprehensive guide to African visa requirements, applications, and costs. Learn about visa-on-arrival, e-visas, and money-saving tips for multi-country trips."
+  },
+  {
+    "slug": "budget-travel-africa", 
+    "title": "Budget Travel Guide: Exploring Africa on a Shoestring",
+    "excerpt": "Discover how to explore Africa affordably with our comprehensive budget guide. Tips for cheap accommodation, transport, food, and activities across the continent.",
+    "author": "2206 Experiences Team",
+    "publishDate": "2025-09-03",
+    "category": "Budget Travel", 
+    "readTime": "10 min read",
+    "tags": ["Budget Travel", "Africa", "Backpacking", "Money-Saving Tips", "Cheap Travel"],
+    "image": "/images/blog/budget-africa-travel.jpg", 
+    "featured": true,
+    "seoTitle": "Budget Africa Travel Guide: How to Travel Cheap in Africa",
+    "seoDescription": "Ultimate budget guide for traveling Africa cheaply. Find the best deals on accommodation, transport, food, and activities. Sample itineraries and cost breakdowns included."
+  },
+  {
+    "slug": "ghana-travel-guide",
+    "title": "Ghana Travel Guide: Gateway to West Africa",
+    "excerpt": "Your complete guide to Ghana - from bustling Accra to historic Cape Coast. Discover the culture, cuisine, attractions, and practical travel information.",
+    "author": "2206 Experiences Team",
+    "publishDate": "2025-09-02",
+    "category": "Destination Guides", 
+    "readTime": "15 min read",
+    "tags": ["Ghana", "West Africa", "Destination Guide", "Culture", "History"],
+    "image": "/images/blog/ghana-guide.jpg",
+    "featured": false
+  },
+  {
+    "slug": "solo-female-travel-africa",
+    "title": "Solo Female Travel in Africa: Safety Tips & Destinations", 
+    "excerpt": "Empowering solo female travelers with practical safety advice, recommended destinations, and real experiences from women who've explored Africa independently.",
+    "author": "Sarah Osei, Travel Blogger",
+    "publishDate": "2025-09-01",
+    "category": "Solo Travel",
+    "readTime": "9 min read", 
+    "tags": ["Solo Travel", "Female Travel", "Africa", "Safety", "Empowerment"],
+    "image": "/images/blog/solo-female-africa.jpg",
+    "featured": false
+  },
+  {
+    "slug": "african-cuisine-guide",
+    "title": "A Foodie's Guide to African Cuisine",
+    "excerpt": "Explore the diverse flavors of African cuisine. From jollof rice debates to Ethiopian coffee ceremonies, discover must-try dishes across the continent.",
+    "author": "Chef Kwame Asante",
+    "publishDate": "2025-08-30", 
+    "category": "Food & Culture",
+    "readTime": "7 min read",
+    "tags": ["Food", "Culture", "African Cuisine", "Local Food", "Travel Eating"],
+    "image": "/images/blog/african-cuisine.jpg",
+    "featured": false
+  }
+]

@@ -1,0 +1,63 @@
+# Build and output directories - comprehensive exclusion
+.next/
+.next/**
+*/.next/
+*/.next/**
+**/.next/
+**/.next/**
+build/
+build/**
+*/build/
+*/build/**
+**/build/
+**/build/**
+out/
+out/**
+*/out/
+*/out/**
+**/out/
+**/out/**
+dist/
+dist/**
+*/dist/
+*/dist/**
+**/dist/
+**/dist/**
+
+# Dependencies
+node_modules/
+node_modules/**
+*/node_modules/
+*/node_modules/**
+**/node_modules/
+**/node_modules/**
+
+# Environment files
+.env*
+
+# Testing coverage
+coverage/
+
+# IDE files
+.vscode/
+.idea/
+
+# Cache directories
+.cache/
+.npm/
+.turbo/
+.swc/
+
+# Generated files and static assets
+static/chunks/**
+static/css/**
+static/js/**
+*.generated.*
+*.compiled.*
+*.bundle.*
+*.chunk.*
+
+# Miscellaneous
+*.log
+.DS_Store
+Thumbs.db
