@@ -241,13 +241,13 @@ export default function BookingModal({ isOpen, onClose, trip }: BookingModalProp
         <div className="px-6 py-4 border-t border-gray-200 flex justify-between">
           <div>
             {step > 1 && (
-              <Button variant="outline" onClick={handleBack}>
+              <Button variant="secondary" onClick={handleBack}>
                 Back
               </Button>
             )}
           </div>
           <div className="space-x-3">
-            <Button variant="outline" onClick={onClose}>
+            <Button variant="secondary" onClick={onClose}>
               Cancel
             </Button>
             {step < 3 ? (

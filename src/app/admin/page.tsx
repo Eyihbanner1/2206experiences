@@ -94,7 +94,7 @@ export default function AdminPage() {
               </div>
               <Button 
                 onClick={() => setIsAuthenticated(false)}
-                variant="outline"
+                variant="secondary"
               >
                 Logout
               </Button>
@@ -305,11 +305,11 @@ function BlogManagement() {
                   <td className="py-3 px-4 text-gray-600">{post.views.toLocaleString()}</td>
                   <td className="py-3 px-4">
                     <div className="flex space-x-2">
-                      <Button variant="outline" size="sm" onClick={() => handleEditPost(post)}>
+                      <Button variant="secondary" size="sm" onClick={() => handleEditPost(post)}>
                         Edit
                       </Button>
                       <Button 
-                        variant="outline" 
+                        variant="secondary" 
                         size="sm" 
                         className="text-red-600 border-red-300 hover:bg-red-50"
                         onClick={() => handleDeletePost(post.id)}
@@ -358,8 +358,8 @@ function GalleryManagement() {
                 <span className="text-sm text-gray-500">{image.date}</span>
               </div>
               <div className="flex space-x-2 mt-4">
-                <Button variant="outline" size="sm">Edit</Button>
-                <Button variant="outline" size="sm">Delete</Button>
+                <Button variant="secondary" size="sm">Edit</Button>
+                <Button variant="secondary" size="sm">Delete</Button>
               </div>
             </div>
           </Card>

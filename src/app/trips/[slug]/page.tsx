@@ -294,7 +294,7 @@ export default function TripDetailPage() {
                 >
                   Book This Trip
                 </Button>
-                <Button variant="outline" className="w-full">
+                <Button variant="secondary" className="w-full">
                   Ask a Question
                 </Button>
               </Card>
@@ -305,7 +305,7 @@ export default function TripDetailPage() {
                 <p className="text-gray-600 mb-4 text-sm">
                   Our travel experts are here to help you plan the perfect adventure.
                 </p>
-                <Button variant="outline" className="w-full">
+                <Button variant="secondary" className="w-full">
                   Contact Our Team
                 </Button>
               </Card>

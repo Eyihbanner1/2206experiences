@@ -371,7 +371,7 @@ export default function BlogPost({ params }: PageProps) {
                   {relatedPost.category}
                 </span>
                 <h3 className="font-bold text-gray-900 mb-4">{relatedPost.title}</h3>
-                <Button href={`/blog/${relatedPost.slug}`} variant="outline" size="sm">
+                <Button href={`/blog/${relatedPost.slug}`} variant="secondary" size="sm">
                   Read More
                 </Button>
               </Card>

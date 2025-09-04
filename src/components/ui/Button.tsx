@@ -5,7 +5,7 @@ import { microInteractions } from "../../styles/microInteractions";
 
 interface ButtonProps {
   children: React.ReactNode;
-  variant?: "primary" | "secondary" | "accent" | "white" | "outline-white";
+  variant?: "primary" | "secondary" | "accent" | "white" | "outline-white" | "outline";
   size?: "xs" | "sm" | "md" | "lg" | "xl";
   href?: string;
   onClick?: () => void;
@@ -83,6 +83,13 @@ export default function Button({
       bg-transparent text-white border-2 border-white border-opacity-60
       hover:bg-white hover:text-purple-600 hover:border-opacity-100 hover:-translate-y-0.5
       focus:ring-white focus:ring-opacity-60 focus:bg-white focus:bg-opacity-10
+      active:transform active:scale-95
+    `.replace(/\s+/g, ' ').trim(),
+    
+    outline: `
+      bg-transparent text-purple-600 border-2 border-purple-200
+      hover:bg-purple-50 hover:border-purple-300 hover:-translate-y-0.5
+      focus:ring-purple-300 focus:bg-purple-50
       active:transform active:scale-95
     `.replace(/\s+/g, ' ').trim()
   };
