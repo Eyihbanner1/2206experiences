@@ -10,7 +10,7 @@ export default function DashboardPage() {
       <section className="section-padding">
         <div className="container-2206">
           <div className="text-center mb-12">
-            <Typography variant="h1" color="primary" className="mb-4">
+            <Typography variant="h1" color="primary" className="mb-4 text-center">
               Account Dashboard
             </Typography>
             <Typography variant="body-lg" color="neutral" className="max-w-2xl mx-auto">

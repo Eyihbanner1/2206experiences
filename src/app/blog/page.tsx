@@ -32,11 +32,89 @@ export default function BlogPage() {
 
   return (
     <MainLayout>
+      {/* Hero Section */}
+      <section className="relative py-20 bg-gradient-to-br from-purple-600 via-lilac-500 to-pink-500 overflow-hidden">
+        <div className="absolute inset-0 bg-black opacity-20"></div>
+        <div className="relative max-w-4xl mx-auto text-center px-4">
+          <div className="mb-8">
+            <div className="w-24 h-24 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6 backdrop-blur-sm">
+              <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9.5a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+              </svg>
+            </div>
+          </div>
+          <Typography variant="h1" color="white" className="mb-6 text-4xl md:text-5xl font-bold text-center">
+            Travel Resources & Blog
+          </Typography>
+          <Typography variant="body-xl" color="white" className="mb-8 opacity-90 max-w-3xl mx-auto text-center">
+            Discover expert travel guides, visa tips, cultural insights, and inspiring stories from our community 
+            of African explorers around the world.
+          </Typography>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button href="#featured" variant="white" size="lg">
+              Read Featured
+            </Button>
+            <Button href="#categories" variant="outline-white" size="lg">
+              Browse Categories
+            </Button>
+          </div>
+        </div>
+
+        {/* Floating Elements */}
+        <div className="absolute top-20 left-10 w-6 h-6 bg-white bg-opacity-20 rounded-full animate-pulse"></div>
+        <div className="absolute top-40 right-20 w-4 h-4 bg-white bg-opacity-30 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute bottom-32 left-20 w-5 h-5 bg-white bg-opacity-25 rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-20 right-10 w-3 h-3 bg-white bg-opacity-35 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+      </section>
+
+      {/* Statistics Section */}
+      <section className="py-16 bg-gradient-to-r from-neutral-50 to-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <Card variant="glass" className="text-center p-6 backdrop-blur-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <Typography variant="h3" color="primary" className="mb-2 text-center">
+                50+
+              </Typography>
+              <Typography variant="body" color="muted" className="text-center">
+                Travel Guides
+              </Typography>
+            </Card>
+            
+            <Card variant="glass" className="text-center p-6 backdrop-blur-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <Typography variant="h3" color="primary" className="mb-2 text-center">
+                25K+
+              </Typography>
+              <Typography variant="body" color="muted" className="text-center">
+                Monthly Readers
+              </Typography>
+            </Card>
+            
+            <Card variant="glass" className="text-center p-6 backdrop-blur-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <Typography variant="h3" color="primary" className="mb-2 text-center">
+                45
+              </Typography>
+              <Typography variant="body" color="muted" className="text-center">
+                Countries Covered
+              </Typography>
+            </Card>
+            
+            <Card variant="glass" className="text-center p-6 backdrop-blur-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <Typography variant="h3" color="primary" className="mb-2 text-center">
+                Weekly
+              </Typography>
+              <Typography variant="body" color="muted" className="text-center">
+                New Content
+              </Typography>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Featured Article */}
-      <section className="section-padding">
+      <section className="section-padding" id="featured">
         <div className="container-2206">
           <div className="mb-12">
-            <Typography variant="h2" color="primary" className="mb-8">Featured Article</Typography>
+            <Typography variant="h2" color="primary" className="mb-8 text-center">Featured Article</Typography>
             <Card className="overflow-hidden">
               <div className="md:flex">
                 <div className="md:w-1/2">
@@ -79,8 +157,8 @@ export default function BlogPage() {
       {/* Categories Filter */}
       <section className="section-padding bg-gray-50">
         <div className="container-2206">
-          <div className="mb-8">
-            <Typography variant="h2" color="primary" className="mb-6">Browse by Category</Typography>
+          <div id="categories" className="mb-8">
+            <Typography variant="h2" color="primary" className="mb-6 text-center">Browse by Category</Typography>
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
                 <button
@@ -156,7 +234,7 @@ export default function BlogPage() {
       {/* Popular Tags */}
       <section className="section-padding bg-gray-50">
         <div className="container-2206">
-          <Typography variant="h2" color="primary" className="mb-6">Popular Topics</Typography>
+          <Typography variant="h2" color="primary" className="mb-6 text-center">Popular Topics</Typography>
           <div className="flex flex-wrap gap-2">
             {[
               'Visa Guide', 'Budget Travel', 'Solo Travel', 'Cultural Tips', 

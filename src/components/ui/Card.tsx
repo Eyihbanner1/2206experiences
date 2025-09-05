@@ -10,6 +10,7 @@ interface CardProps {
   hover?: boolean;
   interactive?: boolean;
   onClick?: () => void;
+  centered?: boolean;
 }
 
 export default function Card({
@@ -19,13 +20,15 @@ export default function Card({
   className = "",
   hover = false,
   interactive = false,
-  onClick
+  onClick,
+  centered = false
 }: CardProps) {
   
   // Base classes using design tokens
   const baseClasses = `
     rounded-lg transition-all duration-300
     ${interactive || onClick ? 'cursor-pointer' : ''}
+    ${centered ? 'text-center' : ''}
   `.trim();
   
   // Padding variants using design system spacing

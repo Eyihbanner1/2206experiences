@@ -68,11 +68,132 @@ export default function ConsultationsPage() {
 
   return (
     <MainLayout>
+      {/* Hero Section */}
+      <section className="relative min-h-[70vh] flex items-center justify-center bg-gradient-to-br from-purple-600 via-pink-500 to-purple-700 text-white overflow-hidden">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+        
+        <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
+          <div className="mb-8">
+            <svg 
+              className="w-20 h-20 mx-auto mb-6 text-white/90" 
+              fill="currentColor" 
+              viewBox="0 0 24 24" 
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M12,2A3,3 0 0,1 15,5V11A3,3 0 0,1 12,14A3,3 0 0,1 9,11V5A3,3 0 0,1 12,2M19,11C19,14.53 16.39,17.44 13,17.93V21H11V17.93C7.61,17.44 5,14.53 5,11H7A5,5 0 0,0 12,16A5,5 0 0,0 17,11H19Z"/>
+              <circle cx="12" cy="12" r="2" fill="none" stroke="currentColor" strokeWidth="1"/>
+            </svg>
+          </div>
+          <Typography variant="h1" className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-center">
+            Expert Travel Consultations
+          </Typography>
+          <Typography variant="h2" className="text-xl md:text-2xl mb-8 text-white/90 font-light max-w-3xl mx-auto leading-relaxed text-center">
+            Personalized guidance from travel experts to help you plan unforgettable adventures and events worldwide
+          </Typography>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button 
+              variant="secondary" 
+              size="lg"
+              className="bg-white text-purple-600 hover:bg-purple-50 px-8 py-4 text-lg font-semibold"
+            >
+              Book Consultation
+            </Button>
+            <Button 
+              variant="outline" 
+              size="lg"
+              className="border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 text-lg font-semibold"
+            >
+              View Services
+            </Button>
+          </div>
+        </div>
+
+        {/* Floating Elements */}
+        <div className="absolute top-20 left-10 w-2 h-2 bg-white/30 rounded-full animate-pulse"></div>
+        <div className="absolute top-40 right-20 w-3 h-3 bg-pink-300/40 rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute bottom-32 left-20 w-1 h-1 bg-purple-300/50 rounded-full animate-pulse delay-2000"></div>
+        <div className="absolute bottom-20 right-10 w-2 h-2 bg-white/20 rounded-full animate-pulse delay-500"></div>
+      </section>
+
+      {/* Statistics Section */}
+      <section className="py-20 bg-gradient-to-b from-purple-50 to-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <Typography variant="h2" className="text-4xl font-bold text-gray-900 mb-4 text-center">
+              Consultation Success Stories
+            </Typography>
+            <Typography variant="body-lg" className="text-xl text-gray-600 max-w-2xl mx-auto">
+              See how our expert guidance has helped travelers create amazing experiences
+            </Typography>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <Card variant="glass" className="text-center p-8 hover:scale-105 transition-transform duration-300">
+              <div className="mb-4">
+                <svg className="w-12 h-12 mx-auto text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9,22A1,1 0 0,1 8,21V18H4A2,2 0 0,1 2,16V4C2,2.89 2.9,2 4,2H20A2,2 0 0,1 22,4V16A2,2 0 0,1 20,18H13.9L10.2,21.71C10,21.9 9.75,22 9.5,22V22H9Z" />
+                </svg>
+              </div>
+              <Typography variant="h3" className="text-4xl font-bold text-purple-600 mb-2">
+                850+
+              </Typography>
+              <Typography variant="body-sm" className="text-gray-600 font-medium">
+                Consultations Completed
+              </Typography>
+            </Card>
+
+            <Card variant="glass" className="text-center p-8 hover:scale-105 transition-transform duration-300">
+              <div className="mb-4">
+                <svg className="w-12 h-12 mx-auto text-pink-600" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.46,13.97L5.82,21L12,17.27Z" />
+                </svg>
+              </div>
+              <Typography variant="h3" className="text-4xl font-bold text-pink-600 mb-2">
+                4.9/5
+              </Typography>
+              <Typography variant="body-sm" className="text-gray-600 font-medium">
+                Average Rating
+              </Typography>
+            </Card>
+
+            <Card variant="glass" className="text-center p-8 hover:scale-105 transition-transform duration-300">
+              <div className="mb-4">
+                <svg className="w-12 h-12 mx-auto text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z" />
+                </svg>
+              </div>
+              <Typography variant="h3" className="text-4xl font-bold text-purple-600 mb-2">
+                65
+              </Typography>
+              <Typography variant="body-sm" className="text-gray-600 font-medium">
+                Countries Planned
+              </Typography>
+            </Card>
+
+            <Card variant="glass" className="text-center p-8 hover:scale-105 transition-transform duration-300">
+              <div className="mb-4">
+                <svg className="w-12 h-12 mx-auto text-pink-600" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M7,10L12,15L17,10H7Z" />
+                  <path d="M2,4A2,2 0 0,0 4,2H20A2,2 0 0,1 22,4V16A2,2 0 0,1 20,18H18V20A2,2 0 0,1 16,22H4A2,2 0 0,1 2,20V4M4,4V18H16V18H6V6H4Z" />
+                </svg>
+              </div>
+              <Typography variant="h3" className="text-4xl font-bold text-pink-600 mb-2">
+                96%
+              </Typography>
+              <Typography variant="body-sm" className="text-gray-600 font-medium">
+                Success Rate
+              </Typography>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
       <section id="services" className="section-padding">
         <div className="container-2206">
           <div className="text-center mb-12">
-            <Typography variant="h2" color="primary" gradient className="mb-4">
+            <Typography variant="h2" color="primary" gradient className="mb-4 text-center">
               Professional Consultation Services
             </Typography>
             <Typography variant="body-lg" color="neutral" className="max-w-2xl mx-auto">

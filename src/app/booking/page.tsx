@@ -163,11 +163,62 @@ export default function BookingPage() {
 
   return (
     <MainLayout>
+      {/* Hero Section */}
+      <section className="section-padding bg-gradient-to-br from-purple-50 via-pink-50 to-purple-100">
+        <div className="container-2206 text-center">
+          <div className="max-w-4xl mx-auto">
+            <div className="mb-6">
+              <svg className="w-20 h-20 mx-auto text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M9,10H7V12H9V10M13,10H11V12H13V10M17,10H15V12H17V10M19,3H18V1H16V3H8V1H6V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M19,19H5V8H19V19Z" />
+              </svg>
+            </div>
+            <Typography variant="h1" color="primary" className="mb-6 text-center">
+              Book Your Adventure
+            </Typography>
+            <Typography variant="body" className="text-xl mb-8 text-center max-w-3xl mx-auto text-gray-600">
+              Reserve your spot on our upcoming international trips or join local events and workshops. Small groups, authentic experiences, and memories that last a lifetime.
+            </Typography>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button variant="primary" size="lg" href="#trips">
+                View Trips
+              </Button>
+              <Button variant="outline" size="lg" href="#local-events">
+                Local Events
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Statistics Section */}
+      <section className="section-padding bg-white">
+        <div className="container-2206">
+          <div className="grid md:grid-cols-4 gap-8">
+            <Card variant="glass" className="text-center p-8 hover:scale-105 transition-transform duration-300">
+              <div className="text-4xl font-bold text-purple-600 mb-2">15+</div>
+              <div className="text-gray-600 font-medium">Annual Trips</div>
+            </Card>
+            <Card variant="glass" className="text-center p-8 hover:scale-105 transition-transform duration-300">
+              <div className="text-4xl font-bold text-purple-600 mb-2">450+</div>
+              <div className="text-gray-600 font-medium">Happy Travelers</div>
+            </Card>
+            <Card variant="glass" className="text-center p-8 hover:scale-105 transition-transform duration-300">
+              <div className="text-4xl font-bold text-purple-600 mb-2">25</div>
+              <div className="text-gray-600 font-medium">Countries Visited</div>
+            </Card>
+            <Card variant="glass" className="text-center p-8 hover:scale-105 transition-transform duration-300">
+              <div className="text-4xl font-bold text-purple-600 mb-2">99%</div>
+              <div className="text-gray-600 font-medium">Satisfaction Rate</div>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Upcoming International Trips */}
-      <section className="section-padding">
+      <section id="trips" className="section-padding bg-gray-50">
         <div className="container-2206">
           <div className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Upcoming International Trips</h2>
+            <Typography variant="h2" color="primary" className="mb-4 text-center">Upcoming International Trips</Typography>
             <p className="text-lg text-gray-600">
               Join our small group adventures to explore Africa&apos;s most incredible destinations
             </p>
@@ -282,10 +333,10 @@ export default function BookingPage() {
       </section>
 
       {/* Local Events */}
-      <section className="section-padding bg-gray-50">
+      <section id="local-events" className="section-padding bg-gray-50">
         <div className="container-2206">
           <div className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Local Events & Workshops</h2>
+            <Typography variant="h2" color="primary" className="mb-4 text-center">Local Events & Workshops</Typography>
             <p className="text-lg text-gray-600">
               Connect with the community through regular meetups and skill-building workshops
             </p>
@@ -367,7 +418,7 @@ export default function BookingPage() {
       <section className="section-padding bg-gray-50">
         <div className="container-2206">
           <div className="mb-12 text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Flexible Payment Options</h2>
+            <Typography variant="h2" color="primary" className="mb-4 text-center">Flexible Payment Options</Typography>
             <p className="text-lg text-gray-600">
               We offer multiple payment methods to make your dream trip affordable
             </p>
@@ -392,7 +443,7 @@ export default function BookingPage() {
       <section className="section-padding">
         <div className="container-2206 max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">How Booking Works</h2>
+            <Typography variant="h2" color="primary" className="mb-4 text-center">How Booking Works</Typography>
             <p className="text-lg text-gray-600">
               Simple 4-step process to secure your adventure
             </p>

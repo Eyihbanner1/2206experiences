@@ -174,31 +174,76 @@ export default function TripsPage() {
     setIsBookingModalOpen(true);
   };
 
-  const features = [
-    {
-      icon: "✈️",
-      title: "Curated Itineraries",
-      description: "Carefully planned trips with local insights and hidden gems"
-    },
-    {
-      icon: "🏨",
-      title: "Quality Accommodation",
-      description: "Handpicked hotels and authentic local stays"
-    },
-    {
-      icon: "👥",
-      title: "Small Groups",
-      description: "Intimate group sizes for personalized experiences"
-    },
-    {
-      icon: "📸",
-      title: "Instagram-Worthy",
-      description: "Perfect photo opportunities at every destination"
-    }
-  ];
-
   return (
     <MainLayout>
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-purple-600 via-purple-500 to-pink-500 py-20">
+        <div className="container-2206 text-center text-white">
+          <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6 backdrop-blur-sm">
+            <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0 9c0 1.657-4.03 3-9 3s-9-1.343-9-3m9 0v9" />
+            </svg>
+          </div>
+          <Typography variant="h1" color="white" className="mb-6 max-w-4xl mx-auto text-center">
+            Curated Adventures & Multi-Day Trips
+          </Typography>
+          <Typography variant="body-xl" color="white" className="mb-8 max-w-3xl mx-auto opacity-90">
+            From English countryside to Mediterranean islands - discover handpicked destinations designed for African explorers seeking authentic cultural experiences.
+          </Typography>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button href="#trips" variant="white" size="lg">
+              Browse Adventures
+            </Button>
+            <Button href="#features" variant="outline-white" size="lg">
+              Why Choose Us
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Statistics Section */}
+      <section className="py-16 bg-gradient-to-br from-purple-50 to-white">
+        <div className="container-2206">
+          <Typography variant="h2" color="primary" gradient className="text-center mb-12">
+            Our Travel Impact
+          </Typography>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <Card variant="glass" padding="loose" className="text-center">
+              <Typography variant="display-xs" color="primary" weight="bold" className="mb-2">
+                180+
+              </Typography>
+              <Typography variant="body-sm" color="neutral" className="opacity-90">
+                Curated Adventures
+              </Typography>
+            </Card>
+            <Card variant="glass" padding="loose" className="text-center">
+              <Typography variant="display-xs" color="primary" weight="bold" className="mb-2">
+                1,200+
+              </Typography>
+              <Typography variant="body-sm" color="neutral" className="opacity-90">
+                Happy Travelers
+              </Typography>
+            </Card>
+            <Card variant="glass" padding="loose" className="text-center">
+              <Typography variant="display-xs" color="primary" weight="bold" className="mb-2">
+                25
+              </Typography>
+              <Typography variant="body-sm" color="neutral" className="opacity-90">
+                Countries Explored
+              </Typography>
+            </Card>
+            <Card variant="glass" padding="loose" className="text-center">
+              <Typography variant="display-xs" color="primary" weight="bold" className="mb-2">
+                98%
+              </Typography>
+              <Typography variant="body-sm" color="neutral" className="opacity-90">
+                Would Recommend
+              </Typography>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       <main className="py-16">
         {/* Search Filters */}
         <section className="max-w-6xl mx-auto px-6 mb-12">
@@ -210,9 +255,9 @@ export default function TripsPage() {
           />
         </section>
         {/* Trip Features */}
-        <section className="max-w-6xl mx-auto px-6 mb-16">
+        <section id="features" className="max-w-6xl mx-auto px-6 mb-16">
           <div className="text-center mb-12">
-            <Typography variant="h2" color="primary" gradient className="mb-4">
+            <Typography variant="h2" color="primary" gradient className="mb-4 text-center">
               Why Choose Our Trips?
             </Typography>
             <Typography variant="body-lg" color="neutral" className="max-w-2xl mx-auto">
@@ -221,22 +266,62 @@ export default function TripsPage() {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <Card key={index} variant="elevated" padding="normal" hover className="text-center">
-                <div className="text-4xl mb-4">{feature.icon}</div>
-                <Typography variant="h4" color="primary" className="mb-2">
-                  {feature.title}
-                </Typography>
-                <Typography variant="body" color="neutral">{feature.description}</Typography>
-              </Card>
-            ))}
+            <Card variant="elevated" padding="normal" hover centered>
+              <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-purple-500 rounded-full flex items-center justify-center mb-4 mx-auto">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <Typography variant="h4" color="primary" className="mb-2" align="center">
+                Curated Itineraries
+              </Typography>
+              <Typography variant="body" color="neutral" align="center">Carefully planned trips with local insights and hidden gems</Typography>
+            </Card>
+
+            <Card variant="elevated" padding="normal" hover centered>
+              <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-400 rounded-full flex items-center justify-center mb-4 mx-auto">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+              </div>
+              <Typography variant="h4" color="primary" className="mb-2" align="center">
+                Quality Accommodation
+              </Typography>
+              <Typography variant="body" color="neutral" align="center">Handpicked hotels and authentic local stays</Typography>
+            </Card>
+
+            <Card variant="elevated" padding="normal" hover centered>
+              <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-pink-400 rounded-full flex items-center justify-center mb-4 mx-auto">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
+              <Typography variant="h4" color="primary" className="mb-2" align="center">
+                Small Groups
+              </Typography>
+              <Typography variant="body" color="neutral" align="center">Intimate group sizes for personalized experiences</Typography>
+            </Card>
+
+            <Card variant="elevated" padding="normal" hover centered>
+              <div className="w-12 h-12 bg-gradient-to-br from-lilac-500 to-purple-400 rounded-full flex items-center justify-center mb-4 mx-auto">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <Typography variant="h4" color="primary" className="mb-2" align="center">
+                Instagram-Worthy
+              </Typography>
+              <Typography variant="body" color="neutral" align="center">Perfect photo opportunities at every destination</Typography>
+            </Card>
           </div>
         </section>
 
         {/* Featured Trips */}
         <section id="trips" className="max-w-6xl mx-auto px-6 mb-16">
           <div className="text-center mb-12">
-            <Typography variant="h2" color="primary" gradient className="mb-4">
+            <Typography variant="h2" color="primary" gradient className="mb-4 text-center">
               {filteredTrips.length === trips.length ? 'Featured Adventures' : `${filteredTrips.length} Adventures Found`}
             </Typography>
             <Typography variant="body-lg" color="neutral">

@@ -1,5 +1,6 @@
 import MainLayout from '../../components/layouts/MainLayout';
 import Card from '../../components/ui/Card';
+import Button from '../../components/ui/Button';
 import Typography from '../../components/ui/Typography';
 import ContactForm from '../../components/ContactForm';
 
@@ -128,11 +129,89 @@ export default function PartnershipsPage() {
 
   return (
     <MainLayout>
+      {/* Hero Section */}
+      <section className="relative py-20 bg-gradient-to-br from-purple-600 via-lilac-500 to-pink-500 overflow-hidden">
+        <div className="absolute inset-0 bg-black opacity-20"></div>
+        <div className="relative max-w-4xl mx-auto text-center px-4">
+          <div className="mb-8">
+            <div className="w-24 h-24 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6 backdrop-blur-sm">
+              <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+            </div>
+          </div>
+          <Typography variant="h1" color="white" className="mb-6 text-4xl md:text-5xl font-bold text-center">
+            Brand Partnerships
+          </Typography>
+          <Typography variant="body-xl" color="white" className="mb-8 opacity-90 max-w-3xl mx-auto text-center">
+            Partner with 2206 Experiences to reach an engaged community of African explorers across 45+ countries. 
+            Authentic storytelling meets measurable results.
+          </Typography>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button href="#audience" variant="white" size="lg">
+              View Our Reach
+            </Button>
+            <Button href="#partnerships" variant="outline-white" size="lg">
+              Partnership Options
+            </Button>
+          </div>
+        </div>
+
+        {/* Floating Elements */}
+        <div className="absolute top-20 left-10 w-6 h-6 bg-white bg-opacity-20 rounded-full animate-pulse"></div>
+        <div className="absolute top-40 right-20 w-4 h-4 bg-white bg-opacity-30 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute bottom-32 left-20 w-5 h-5 bg-white bg-opacity-25 rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-20 right-10 w-3 h-3 bg-white bg-opacity-35 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+      </section>
+
+      {/* Statistics Section */}
+      <section className="py-16 bg-gradient-to-r from-neutral-50 to-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <Card variant="glass" className="text-center p-6 backdrop-blur-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <Typography variant="h3" color="primary" className="mb-2 text-center">
+                250K+
+              </Typography>
+              <Typography variant="body" color="muted" className="text-center">
+                Community Reach
+              </Typography>
+            </Card>
+            
+            <Card variant="glass" className="text-center p-6 backdrop-blur-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <Typography variant="h3" color="primary" className="mb-2 text-center">
+                9.5%
+              </Typography>
+              <Typography variant="body" color="muted" className="text-center">
+                Avg Engagement
+              </Typography>
+            </Card>
+            
+            <Card variant="glass" className="text-center p-6 backdrop-blur-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <Typography variant="h3" color="primary" className="mb-2 text-center">
+                45+
+              </Typography>
+              <Typography variant="body" color="muted" className="text-center">
+                Countries
+              </Typography>
+            </Card>
+            
+            <Card variant="glass" className="text-center p-6 backdrop-blur-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <Typography variant="h3" color="primary" className="mb-2 text-center">
+                98%
+              </Typography>
+              <Typography variant="body" color="muted" className="text-center">
+                Client Satisfaction
+              </Typography>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Why Partner With Us */}
-      <section className="section-padding">
+      <section className="section-padding" id="partnerships">
         <div className="container-2206">
           <div className="text-center mb-12">
-            <Typography variant="h2" color="primary" className="mb-4">Why Choose 2206 Experiences?</Typography>
+            <Typography variant="h2" color="primary" className="mb-4 text-center">Why Choose 2206 Experiences?</Typography>
             <Typography variant="body-lg" color="neutral" className="max-w-3xl mx-auto">
               We&apos;re not just another travel company. We&apos;re a community-driven platform with deep cultural connections 
               and authentic engagement across the African diaspora.
@@ -223,7 +302,7 @@ export default function PartnershipsPage() {
       <section className="section-padding bg-gray-50">
         <div className="container-2206">
           <div className="text-center mb-12">
-            <Typography variant="h2" color="primary" className="mb-4">Partnership Opportunities</Typography>
+            <Typography variant="h2" color="primary" className="mb-4 text-center">Partnership Opportunities</Typography>
             <Typography variant="body-lg" color="neutral">
               We work with brands across multiple industries to create authentic, engaging campaigns
             </Typography>
@@ -267,7 +346,7 @@ export default function PartnershipsPage() {
       <section className="section-padding">
         <div className="container-2206">
           <div className="text-center mb-12">
-            <Typography variant="h2" color="primary" className="mb-4">Success Stories</Typography>
+            <Typography variant="h2" color="primary" className="mb-4 text-center">Success Stories</Typography>
             <Typography variant="body-lg" color="neutral">
               Real results from our brand partnerships
             </Typography>
@@ -321,7 +400,7 @@ export default function PartnershipsPage() {
         <div className="container-2206">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <Typography variant="h2" color="primary" className="mb-4">Let&apos;s Work Together</Typography>
+              <Typography variant="h2" color="primary" className="mb-4 text-center">Let&apos;s Work Together</Typography>
               <Typography variant="body-lg" color="neutral">
                 Ready to partner with us? Get in touch and let&apos;s discuss how we can help achieve your marketing goals.
               </Typography>
@@ -404,7 +483,7 @@ export default function PartnershipsPage() {
       <section className="section-padding">
         <div className="container-2206">
           <div className="bg-gradient-to-r from-purple-600 to-pink-500 rounded-lg p-8 text-white text-center">
-            <Typography variant="h2" color="white" className="mb-4">Ready to Partner With Us?</Typography>
+            <Typography variant="h2" color="white" className="mb-4 text-center">Ready to Partner With Us?</Typography>
             <Typography variant="body-lg" color="white" className="mb-6 opacity-90">
               Join brands like Visit Greece, Revolut, and others who&apos;ve achieved exceptional results with our community.
             </Typography>

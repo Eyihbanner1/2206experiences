@@ -112,11 +112,89 @@ export default function MerchPage() {
 
   return (
     <MainLayout>
+      {/* Hero Section */}
+      <section className="relative py-20 bg-gradient-to-br from-purple-600 via-lilac-500 to-pink-500 overflow-hidden">
+        <div className="absolute inset-0 bg-black opacity-20"></div>
+        <div className="relative max-w-4xl mx-auto text-center px-4">
+          <div className="mb-8">
+            <div className="w-24 h-24 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6 backdrop-blur-sm">
+              <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+              </svg>
+            </div>
+          </div>
+          <Typography variant="h1" color="white" className="mb-6 text-4xl md:text-5xl font-bold text-center">
+            Official Merchandise
+          </Typography>
+          <Typography variant="body-xl" color="white" className="mb-8 opacity-90 max-w-3xl mx-auto text-center">
+            Wear your wanderlust with pride. Our exclusive collection features high-quality apparel and accessories 
+            that celebrate the spirit of African exploration and community.
+          </Typography>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button href="#featured" variant="white" size="lg">
+              Shop Featured
+            </Button>
+            <Button href="#all-products" variant="outline-white" size="lg">
+              View All Products
+            </Button>
+          </div>
+        </div>
+
+        {/* Floating Elements */}
+        <div className="absolute top-20 left-10 w-6 h-6 bg-white bg-opacity-20 rounded-full animate-pulse"></div>
+        <div className="absolute top-40 right-20 w-4 h-4 bg-white bg-opacity-30 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute bottom-32 left-20 w-5 h-5 bg-white bg-opacity-25 rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-20 right-10 w-3 h-3 bg-white bg-opacity-35 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+      </section>
+
+      {/* Statistics Section */}
+      <section className="py-16 bg-gradient-to-r from-neutral-50 to-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <Card variant="glass" className="text-center p-6 backdrop-blur-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <Typography variant="h3" color="primary" className="mb-2 text-center">
+                25+
+              </Typography>
+              <Typography variant="body" color="muted" className="text-center">
+                Product Designs
+              </Typography>
+            </Card>
+            
+            <Card variant="glass" className="text-center p-6 backdrop-blur-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <Typography variant="h3" color="primary" className="mb-2 text-center">
+                2,500+
+              </Typography>
+              <Typography variant="body" color="muted" className="text-center">
+                Happy Customers
+              </Typography>
+            </Card>
+            
+            <Card variant="glass" className="text-center p-6 backdrop-blur-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <Typography variant="h3" color="primary" className="mb-2 text-center">
+                98%
+              </Typography>
+              <Typography variant="body" color="muted" className="text-center">
+                Quality Rating
+              </Typography>
+            </Card>
+            
+            <Card variant="glass" className="text-center p-6 backdrop-blur-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+              <Typography variant="h3" color="primary" className="mb-2 text-center">
+                48hr
+              </Typography>
+              <Typography variant="body" color="muted" className="text-center">
+                Fast Shipping
+              </Typography>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Featured Products */}
-      <section className="section-padding">
+      <section className="section-padding" id="featured">
         <div className="container-2206">
           <div className="text-center mb-12">
-            <Typography variant="h2" color="primary" gradient className="mb-4">
+            <Typography variant="h2" color="primary" gradient className="mb-4 text-center">
               Featured Collection
             </Typography>
             <Typography variant="body-lg" color="neutral">
@@ -218,7 +296,7 @@ export default function MerchPage() {
       <section className="section-padding bg-gray-50">
         <div className="container-2206">
           <div className="max-w-4xl mx-auto text-center">
-            <Typography variant="h2" color="primary" gradient className="mb-6">
+            <Typography variant="h2" color="primary" gradient className="mb-6 text-center">
               More Than Just Merchandise
             </Typography>
             <Typography variant="body-lg" color="neutral" className="mb-8">
@@ -264,7 +342,7 @@ export default function MerchPage() {
       <section className="section-padding">
         <div className="container-2206">
           <div className="mb-8">
-            <Typography variant="h2" color="primary" className="mb-6">
+            <Typography variant="h2" color="primary" className="mb-6 text-center">
               Complete Collection
             </Typography>
             <div className="flex flex-wrap gap-2 mb-8">
@@ -365,7 +443,7 @@ export default function MerchPage() {
       <section className="section-padding">
         <div className="container-2206">
           <div className="text-center mb-12">
-            <Typography variant="h2" color="primary" className="mb-4">Community Style</Typography>
+            <Typography variant="h2" color="primary" className="mb-4 text-center">Community Style</Typography>
             <Typography variant="body-lg" color="neutral" className="mb-8">
               See how our community rocks their 2206 merch around the world
             </Typography>
@@ -389,7 +467,7 @@ export default function MerchPage() {
       <section className="section-padding bg-gray-50">
         <div className="container-2206">
           <div className="bg-gradient-to-r from-purple-600 to-pink-500 rounded-lg p-8 text-white text-center">
-            <Typography variant="h2" color="white" className="mb-4">Join the Style Movement</Typography>
+            <Typography variant="h2" color="white" className="mb-4 text-center">Join the Style Movement</Typography>
             <Typography variant="body-lg" color="white" className="mb-6 opacity-90">
               Every purchase supports our community events and travel scholarship program. 
               Look good, feel good, do good.

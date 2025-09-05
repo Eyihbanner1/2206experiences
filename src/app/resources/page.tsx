@@ -128,39 +128,66 @@ export default function ResourcesPage() {
 
   return (
     <MainLayout>
-      {/* Resource Stats */}
-      <section className="section-padding bg-gray-50">
-        <div className="container-2206">
-          <div className="grid md:grid-cols-4 gap-8 mb-12">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-purple-600 mb-2">25+</div>
-              <div className="text-gray-600">Free Resources</div>
+      {/* Hero Section */}
+      <section className="section-padding bg-gradient-to-br from-purple-50 via-pink-50 to-purple-100">
+        <div className="container-2206 text-center">
+          <div className="max-w-4xl mx-auto">
+            <div className="mb-6">
+              <svg className="w-20 h-20 mx-auto text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" />
+              </svg>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-purple-600 mb-2">50K+</div>
-              <div className="text-gray-600">Downloads</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-purple-600 mb-2">12</div>
-              <div className="text-gray-600">Resource Categories</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-purple-600 mb-2">100%</div>
-              <div className="text-gray-600">Free Forever</div>
+            <Typography variant="h1" color="primary" className="mb-6 text-center">
+              Travel Resources Hub
+            </Typography>
+            <Typography variant="body" className="text-xl mb-8 text-center max-w-3xl mx-auto text-gray-600">
+              Essential guides, tools, and resources to help you plan, prepare, and enjoy your African travel adventures. All resources are completely free and regularly updated.
+            </Typography>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button variant="primary" size="lg" href="#resources">
+                Browse Resources
+              </Button>
+              <Button variant="outline" size="lg" href="#newsletter">
+                Get Updates
+              </Button>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Statistics Section */}
+      <section className="section-padding bg-white">
+        <div className="container-2206">
+          <div className="grid md:grid-cols-4 gap-8">
+            <Card variant="glass" className="text-center p-8 hover:scale-105 transition-transform duration-300">
+              <div className="text-4xl font-bold text-purple-600 mb-2">25+</div>
+              <div className="text-gray-600 font-medium">Free Resources</div>
+            </Card>
+            <Card variant="glass" className="text-center p-8 hover:scale-105 transition-transform duration-300">
+              <div className="text-4xl font-bold text-purple-600 mb-2">50K+</div>
+              <div className="text-gray-600 font-medium">Downloads</div>
+            </Card>
+            <Card variant="glass" className="text-center p-8 hover:scale-105 transition-transform duration-300">
+              <div className="text-4xl font-bold text-purple-600 mb-2">12</div>
+              <div className="text-gray-600 font-medium">Resource Categories</div>
+            </Card>
+            <Card variant="glass" className="text-center p-8 hover:scale-105 transition-transform duration-300">
+              <div className="text-4xl font-bold text-purple-600 mb-2">100%</div>
+              <div className="text-gray-600 font-medium">Free Forever</div>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Resource Categories */}
-      <section className="section-padding">
+      <section id="resources" className="section-padding bg-gray-50">
         <div className="container-2206">
           <div className="space-y-16">
             {resourceCategories.map((category) => (
               <div key={category.id} className="max-w-6xl mx-auto">
                 <div className="text-center mb-12">
                   <div className="text-6xl mb-4">{category.icon}</div>
-                  <h2 className="text-3xl font-bold text-gray-900 mb-4">{category.title}</h2>
+                  <Typography variant="h2" color="primary" className="mb-4 text-center">{category.title}</Typography>
                   <p className="text-lg text-gray-600 max-w-2xl mx-auto">{category.description}</p>
                 </div>
 
